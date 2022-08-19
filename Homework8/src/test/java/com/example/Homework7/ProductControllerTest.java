@@ -35,10 +35,8 @@ public class ProductControllerTest {
     public void it_should_return_created_product() throws Exception {
         CreateProductRequest request = new CreateProductRequest();
         request.setName("test product");
-
         Product product = new Product();
         product.setName(request.getName());
-
         when(productService.saveProduct(any(Product.class))).thenReturn(product);
 
         mockMvc.perform(post("/products"))

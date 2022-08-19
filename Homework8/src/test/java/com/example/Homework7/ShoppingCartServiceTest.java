@@ -19,7 +19,6 @@ import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 public class ShoppingCartServiceTest {
-
     @Mock
     private ShoppingCartRepository shoppingCartRepository;
 
@@ -43,5 +42,4 @@ public class ShoppingCartServiceTest {
         ShoppingCart savedShoppingCart = shoppingCartRepository.save(scs);
         assertThat(savedShoppingCart.getProductList()).isNotNull();
     }
-
 }
